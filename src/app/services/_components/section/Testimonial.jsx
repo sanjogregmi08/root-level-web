@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <div className="py-10 md:py-20 px-3 xl:px-[10rem] bg-white w-full">
+    <div className="py-10 md:py-20 px-3 xl:px-[8rem] bg-white w-full">
       <div className="flex flex-col items-center justify-center w-full">
         <span className="text-custom-primary font-bold uppercase">
           Testimonials

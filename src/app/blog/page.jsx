@@ -3,15 +3,10 @@ import React from "react";
 import { LuArrowUpRight } from "react-icons/lu";
 import { blogData } from "@/app/dummyData";
 
-const LatestNews = () => {
+const BlogPage = () => {
   return (
-    <div className="py-10 md:py-20 px-3 xl:px-[8rem] w-full bg-custom-darkLight">
-      <div className="flex flex-col items-center justify-center w-full">
-        <span className="text-custom-primary font-bold uppercase">
-          Our Articles
-        </span>
-        <h1 className="text-black font-black text-[2rem] md:text-[3rem] text-center">{`Over Latest News`}</h1>
-      </div>
+    <div className="pt-5 pb-20 px-3 xl:px-[8rem] w-full bg-custom-darkLight">
+      <h1 className="text-black font-black text-[2rem]">{`Recent Blogs`}</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
         {blogData.map((blog) => (
           <div
@@ -52,4 +47,4 @@ const LatestNews = () => {
   );
 };
 
-export default LatestNews;
+export default BlogPage;

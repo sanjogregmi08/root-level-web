@@ -12,7 +12,7 @@ const CareerPage = () => {
   };
 
   return (
-    <div className="py-10 md:py-20 px-3 xl:px-[10rem] w-full">
+    <div className="py-10 md:py-20 px-3 xl:px-[8rem] w-full">
       <div className="flex flex-col-reverse md:flex-row items-center gap-10">
         <div className="w-full">
           <h1 className="text-displayMedium md:text-displayLarge font-extrabold">

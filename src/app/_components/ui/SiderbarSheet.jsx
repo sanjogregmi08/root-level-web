@@ -14,7 +14,6 @@ import { LuAlignJustify } from "react-icons/lu";
 import logo from "@/assets/svg/logo.svg";
 import Image from "next/image";
 
-
 export function SidebarSheet() {
   return (
     <Sheet>
@@ -27,8 +26,7 @@ export function SidebarSheet() {
         <div>
           <SheetHeader>
             <SheetTitle>
-            <Image src={logo} width={150} height={50} alt="logo" />
-
+              <Image src={logo} width={150} height={50} alt="logo" />
             </SheetTitle>
             <SheetDescription></SheetDescription>
           </SheetHeader>
@@ -49,6 +47,14 @@ export function SidebarSheet() {
                   className="font-medium text-custom-neutral20 hover:text-custom-primary"
                 >
                   Our Services
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link
+                  href={`/blog`}
+                  className="font-medium text-custom-neutral20 hover:text-custom-primary"
+                >
+                  Blogs
                 </Link>
               </SheetClose>
               <SheetClose asChild>

@@ -46,7 +46,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="py-10 md:py-20 px-3 xl:px-[10rem] w-full flex flex-col md:flex-row gap-10">
+    <div className="py-10 md:py-20 px-3 xl:px-[8rem] w-full flex flex-col md:flex-row gap-10">
       <div className="w-full flex flex-col md:pt-48">
         <h1 className="text-black font-black text-[s2rem] xl:text-[3rem]">{`Let's Chat.`}</h1>
         <p className="text-black font-semibold">ONE CLICK AND BE WITH US</p>

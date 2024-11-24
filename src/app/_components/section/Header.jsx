@@ -34,6 +34,12 @@ const Header = () => {
             Our Services
           </Link>
           <Link
+            href={`/blog`}
+            className="font-medium text-custom-neutral20 hover:text-custom-primary"
+          >
+            Blogs
+          </Link>
+          <Link
             href={`/career`}
             className="font-medium text-custom-neutral20 hover:text-custom-primary"
           >

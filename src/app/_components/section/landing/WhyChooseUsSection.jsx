@@ -2,11 +2,11 @@ import React from "react";
 
 const WhyChooseUsSection = () => {
   return (
-    <div className="py-10 md:py-20 px-3 xl:px-[10rem] bg-custom-darkLight flex flex-col md:flex-row gap-6 md:gap-10">
+    <div className="py-10 md:py-20 px-3 xl:px-[8rem] bg-custom-darkLight flex flex-col md:flex-row gap-6 md:gap-10">
       <div className="bg-custom-primary/50 h-[20rem] md:h-[40rem] w-full"></div>
       <div className="w-full">
         <span className="text-custom-primary font-bold uppercase">
-        Why Choose Root Level?
+          Why Choose Root Level?
         </span>
         <h1 className="w-full text-black font-black text-[2rem] md:text-[3rem]">{`Benefits of Partnering with Our IT Agency`}</h1>
         <p className="text-custom-neutral60">{`At Root Level, we are dedicated to helping businesses succeed through innovative and reliable IT solutions. Here’s why businesses trust us:
