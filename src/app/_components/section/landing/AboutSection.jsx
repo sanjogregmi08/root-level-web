@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import aboutImage from "@/assets/images/team-work.png";
 
 const AboutSection = () => {
   return (
@@ -8,7 +10,8 @@ const AboutSection = () => {
       <h1 className="w-full xl:w-1/2 text-black font-black text-[2rem] md:text-[3rem]">{`Root Level: Delivering Only Exceptional Quality Work`}</h1>
       <div className="relative">
         <div className="mt-10 md:flex md:gap-6">
-          <div className="bg-custom-primary/50 w-full h-[30rem]"></div>
+        <Image src={aboutImage} alt="About Us" className="w-full h-[30rem]" />
+
           <div className="mt-5 md:mt-0 w-4/6">
             <p className="mb-5">{`At Root Level, we are committed to providing innovative IT solutions that empower businesses to achieve their goals. Since our inception in 2020, we have been known for delivering exceptional quality across all our projects.
 
