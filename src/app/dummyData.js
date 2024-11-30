@@ -58,3 +58,69 @@ export const blogData = [
     ],
   },
 ];
+
+export const servicesData = [
+  {
+    id: 1,
+    title: "Real Insights AI",
+    icon: "LuTerminalSquare",
+    description:
+      "We developed a scalable and user-friendly solution to streamline operations and increase efficiency for our client in Real state.",
+    links: [
+      {
+        text: "more-information",
+        url: "#",
+        buttonStyle:
+          "bg-custom-primary text-white rounded-xl text-bodyMediumSmall px-4 py-1 hover:bg-black transition-all duration-200",
+      },
+      {
+        text: "view-case-study",
+        url: "#",
+        buttonStyle:
+          "border border-custom-primary hover:text-white rounded-xl text-bodyMediumSmall  px-4 py-1 hover:bg-black transition-all duration-200",
+      },
+    ],
+  },
+  // {
+  //   id: 2,
+  //   title: "Mobile Services",
+  //   icon: "LuSmartphone",
+  //   description:
+  //     "Our mobile app development services are designed to create engaging, user-friendly applications that cater to the needs of your target audience. From concept to launch, we ensure a seamless experience for your users.",
+  //   links: [
+  //     {
+  //       text: "more-information",
+  //       url: "#",
+  //       buttonStyle:
+  //         "bg-custom-primary text-white rounded-xl text-bodyMediumSmall px-4 py-1 hover:bg-black transition-all duration-200",
+  //     },
+  //     {
+  //       text: "examples",
+  //       url: "#",
+  //       buttonStyle:
+  //         "border border-custom-primary hover:text-white rounded-xl text-bodyMediumSmall  px-4 py-1 hover:bg-black transition-all duration-200",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 3,
+  //   title: "Cloud Services",
+  //   icon: "LuCloud",
+  //   description:
+  //     "Our cloud services offer secure, scalable solutions that enable your business to operate efficiently and effectively. From data storage to application hosting, we provide the infrastructure you need to succeed.",
+  //   links: [
+  //     {
+  //       text: "more-information",
+  //       url: "#",
+  //       buttonStyle:
+  //         "bg-custom-primary text-white rounded-xl text-bodyMediumSmall px-4 py-1 hover:bg-black transition-all duration-200",
+  //     },
+  //     {
+  //       text: "examples",
+  //       url: "#",
+  //       buttonStyle:
+  //         "border border-custom-primary hover:text-white rounded-xl text-bodyMediumSmall  px-4 py-1 hover:bg-black transition-all duration-200",
+  //     },
+  //   ],
+  // },
+];

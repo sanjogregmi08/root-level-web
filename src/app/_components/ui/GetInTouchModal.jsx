@@ -64,7 +64,7 @@ const GetInTouchModal = () => {
         <DialogTrigger asChild>
           <button
             onClick={() => setIsOpen(true)} // Open the modal
-            className="bg-custom-primary hover:bg-black text-white px-4 py-1.5 transition-all duration-200 rounded-lg flex gap-2 items-center"
+            className="bg-custom-primary hover:bg-custom-primary text-white px-4 py-1.5 transition-all duration-200 rounded-lg flex gap-2 items-center"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -96,7 +96,8 @@ const GetInTouchModal = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="border-2 mt-1 w-full border-custom-neutral90 focus:border-custom-neutral20 rounded-xl h-12 px-4"
+                    autoComplete="off"
+                    className="border mt-1 w-full border-[#ecf4f8] focus:border-custom-neutral20 rounded-xl h-12 px-4"
                   />
                   {errors.name && (
                     <span style={{ color: "red" }}>{errors.name}</span>
@@ -115,7 +116,8 @@ const GetInTouchModal = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="border-2 mt-1 w-full border-custom-neutral90 focus:border-custom-neutral20 rounded-xl h-12 px-4"
+                    autoComplete="off"
+                    className="border mt-1 w-full border-[#ecf4f8] focus:border-custom-neutral20 rounded-xl h-12 px-4"
                   />
                   {errors.email && (
                     <span style={{ color: "red" }}>{errors.email}</span>
@@ -134,7 +136,8 @@ const GetInTouchModal = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="border-2 mt-1 w-full border-custom-neutral90 focus:border-custom-neutral20 rounded-xl h-12 px-4"
+                    autoComplete="off"
+                    className="border mt-1 w-full border-[#ecf4f8] focus:border-custom-neutral20 rounded-xl h-12 px-4"
                   />
                   {errors.subject && (
                     <span style={{ color: "red" }}>{errors.subject}</span>
@@ -152,7 +155,8 @@ const GetInTouchModal = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="border-2 w-full py-2 mt-1 border-custom-neutral90 focus:border-custom-neutral20 rounded-xl h-24 px-4"
+                    autoComplete="off"
+                    className="border w-full py-2 mt-1 border-[#ecf4f8] focus:border-custom-neutral20 rounded-xl h-24 px-4"
                   />
                   {errors.message && (
                     <span style={{ color: "red" }}>{errors.message}</span>
@@ -161,7 +165,7 @@ const GetInTouchModal = () => {
 
                 <button
                   type="submit"
-                  className="bg-custom-primary hover:bg-[#b20779] text-white font-semibold px-6 py-3 transition-all duration-200"
+                  className="bg-custom-primary text-white rounded-xl hover:bg-black font-semibold px-8 py-2 transition-all duration-200"
                 >
                   Submit
                 </button>
