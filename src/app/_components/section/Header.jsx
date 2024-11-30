@@ -25,29 +25,29 @@ const Header = () => {
           </Link>
         </div>
         <div className="hidden md:flex items-center gap-6">
-          <Link href={`/about-us`} className="flex items-center gap-1">
-            <span className="group relative font-medium text-custom-neutral20">
+          <Link href={`/about-us`} className="flex items-center gap-1 group">
+            <span className=" relative font-medium text-custom-neutral20">
               About Us
               <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </span>
             <TbCone className="w-4 h-4" />
           </Link>
-          <Link href={`/services`} className="flex items-center gap-1">
-            <span className="group relative font-medium text-custom-neutral20">
+          <Link href={`/services`} className="flex items-center gap-1 group">
+            <span className=" relative font-medium text-custom-neutral20">
               Services
               <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </span>
             <IoCodeSlashOutline className="w-4 h-4" />
           </Link>
-          <Link href={`/career`} className="flex items-center gap-1">
-            <span className="group relative font-medium text-custom-neutral20">
+          <Link href={`/career`} className="flex items-center gap-1 group">
+            <span className=" relative font-medium text-custom-neutral20">
               Career
               <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </span>
             <IoBriefcaseOutline className="w-4 h-4" />
           </Link>
-          <Link href={`/contact-us`} className="flex items-center gap-1">
-            <span className="group relative font-medium text-custom-neutral20">
+          <Link href={`/contact-us`} className="flex items-center gap-1 group">
+            <span className=" relative font-medium text-custom-neutral20">
               Contact Us
               <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </span>
