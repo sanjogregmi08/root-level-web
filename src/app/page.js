@@ -1,19 +1,24 @@
 import AboutOurCompanySection from "./_components/section/landing/AboutOurCompanySection";
 import AboutSection from "./_components/section/landing/AboutSection";
-import AboutUsSection from "./_components/section/landing/AboutUsSection";
-import HeroSection from "./_components/section/landing/HeroSection";
-import OurServicesSection from "./_components/section/landing/OurServicesSection";
 import Testimonial from "./_components/section/landing/Testimonial";
 import WhatWeDo from "./_components/section/landing/WhatWeDo";
 import WhyBusinessChooseUsSection from "./_components/section/landing/WhyBusinessChooseUsSection";
 import WhyChooseUsSection from "./_components/section/landing/WhyChooseUsSection";
+
+import AboutUsSection from "./_components/section/landing/AboutUsSection";
+import ContactUsSection from "./_components/section/landing/ContactUsSection";
+import HeroSection from "./_components/section/landing/HeroSection";
+import OurProcessSection from "./_components/section/landing/OurProcessSection";
+import PortFolioSection from "./_components/section/landing/PortfolioSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <AboutUsSection />
-      <OurServicesSection />
+      <PortFolioSection />
+      <OurProcessSection />
+      <ContactUsSection />
 
       {/* old section */}
       {/* <WhyChooseUsSection />

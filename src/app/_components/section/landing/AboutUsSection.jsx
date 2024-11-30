@@ -4,8 +4,8 @@ import { LuArrowUpRight } from "react-icons/lu";
 
 const AboutUsSection = () => {
   return (
-    <div className="py-16 px-4 flex justify-center">
-      <div className="max-w-[64.375rem] flex flex-col items-center text-custom-primary">
+    <div className="py-16 px-4 flex justify-center bg-[#fffffb]">
+      <div className="max-w-[68.375rem] flex flex-col items-center text-custom-primary">
         <div className="mb-5 text-center">
           <span className="text-titleMediumLarge font-medium">{`innovative-solutions - elevating-success`}</span>
         </div>
@@ -16,7 +16,7 @@ const AboutUsSection = () => {
               {`Root Level is a dedicated team of innovators, strategists, and developers. Our mission is to deliver software solutions that combine cutting-edge technology, startup agility, and unparalleled attention to detail—all while offering competitive pricing.`}
             </p>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <div className="bg-custom-blueLighter rounded-xl p-3 md:col-span-2">
+              <div className="border border-[#ecf4f8] rounded-xl p-3 md:col-span-2">
                 <div className="flex gap-2 items-center">
                   <div className="bg-[#dee5ef] rounded-full w-8 h-8 grid place-content-center">
                     <span className="font-medium">1</span>
@@ -30,7 +30,7 @@ const AboutUsSection = () => {
                   <li>{`Tech Consulting: Expert advice to navigate challenges and optimize technology investments.`}</li>
                 </ul>
               </div>
-              <div className="bg-custom-blueLighter rounded-xl p-3">
+              <div className="border border-[#ecf4f8] rounded-xl p-3">
                 <div className="flex gap-2 items-center">
                   <div className="bg-[#dee5ef] rounded-full w-8 h-8 grid place-content-center">
                     <span className="font-medium">2</span>
@@ -43,7 +43,7 @@ const AboutUsSection = () => {
                   <li>{`Deep industry experience across fintech, healthcare, e-commerce, and more.`}</li>
                 </ul>
               </div>
-              <div className="bg-custom-blueLighter rounded-xl p-3">
+              <div className="border border-[#ecf4f8] rounded-xl p-3">
                 <div className="flex gap-2 items-center">
                   <div className="bg-[#dee5ef] rounded-full w-8 h-8 grid place-content-center">
                     <span className="font-medium">3</span>
