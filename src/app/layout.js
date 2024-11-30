@@ -18,8 +18,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={workSan.className}>
+    <html
+      lang="en"
+      style={{ scrollBehavior: "smooth", backgroundColor: "#FFFFFB" }}
+    >
+      <body className={workSan.className}
+        style={{ backgroundColor: "#FFFFFB", }}
+      >
         <Header />
         {children}
         <Footer />
