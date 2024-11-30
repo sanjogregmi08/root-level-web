@@ -10,15 +10,15 @@ import { PiFacebookLogoBold } from "react-icons/pi";
 
 const ContactUsSection = () => {
   return (
-    <div className="">
-      <div className="py-16 px-4 flex justify-center">
+    <div className="" id="contact-us">
+      <div className="py-16 px-8 flex justify-center">
         <div className="max-w-[68.375rem] pb-96 xs:pb-72 md:pb-36 xl:pb-0  flex flex-col items-center text-custom-primary relative">
           <div className="mb-5 text-center">
             <span className="text-titleMediumLarge font-medium">{`contact-us`}</span>
           </div>
           <div>
-            <h1 className="text-displaySmall font-bold mb-5 text-center">{`We are happy to answer all your questions!`}</h1>
-            <p className=" text-headlineSmall font-bold mb-5 text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 text-center">{`We are happy to answer all your questions!`}</h1>
+            <p className=" text-xl sm:text-2xl md:text-3xl font-bold mb-5 text-center">
               The Root Level
             </p>
           </div>

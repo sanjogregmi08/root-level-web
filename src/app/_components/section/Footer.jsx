@@ -7,7 +7,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="py-14 px-8 xl:px-32 border-t-[1px] border-[#ecf4f8] text-custom-primary bg-[#fffffb]">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6">
         <div className="font-extrabold text-3xl">
           <Image src={logo} width={150} height={50} alt="logo" />
         </div>
@@ -63,8 +63,8 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="space-y-2">
-          <h2 className="font-bold text-titleMedium">OTHERS</h2>
+        <div className="space-y-2 sm:col-start-2 md:col-span-1">
+          <h2 className="font-bold text-titleMedium ">OTHERS</h2>
           <div className="grid gap-3">
             <Link href={`/`} className="text-titleSmall group w-fit">
               <span className="relative font-medium text-custom-neutral20">

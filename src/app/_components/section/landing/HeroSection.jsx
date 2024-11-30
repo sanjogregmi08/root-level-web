@@ -52,7 +52,7 @@ const HeroSection = () => {
         >
           {/* First Card */}
           <Card
-            className={`xl:absolute xl:w-[22.313rem] md:h-[22rem] top-10 drop-shadow-xl xl:drop-shadow-4xl bg-[rgba(255,255,251,0.33)] transition-transform duration-300 ease-in-out cursor-pointer xl:bg-[rgba(255,255,251,0.80)] !shadow-lg ${
+            className={`xl:absolute xl:w-[22.313rem] md:h-[22rem] top-10 drop-shadow-xl xl:drop-shadow-2xl bg-[rgba(255,255,251,0.33)] transition-transform duration-300 ease-in-out cursor-pointer xl:bg-[rgba(255,255,251,0.80)] !shadow-lg ${
               isFirstCardClicked
                 ? "xl:z-10 xl:rotate-[-18deg] xl:scale-110"
                 : isSecondCardClicked
@@ -82,14 +82,14 @@ const HeroSection = () => {
                 </p>
               </div>
               <div className="w-full flex justify-start">
-                <Button className="basis-1/2">Learn More</Button>
+                <Button className="basis-1/2 bg-custom-primary rounded-xl">Learn More</Button>
               </div>
             </div>
           </Card>
 
           {/* Second Card */}
           <Card
-            className={`xl:absolute xl:w-[22.313rem] md:h-[22rem] drop-shadow-xl bg-[rgba(255,255,251,0.33)] xl:bg-[rgba(255,255,251,0.80)] !shadow-lg  left-16 xl:translate-x-[10rem] top-10 xl:drop-shadow-4xl xl:rotate-[12deg] transition-transform duration-300 ease-in-out cursor-pointer 
+            className={`xl:absolute xl:w-[22.313rem] md:h-[22rem] drop-shadow-xl bg-[rgba(255,255,251,0.33)] xl:bg-[rgba(255,255,251,0.80)] !shadow-lg  left-16 xl:translate-x-[10rem] top-10 xl:drop-shadow-2xl xl:rotate-[12deg] transition-transform duration-300 ease-in-out cursor-pointer 
       !flex !flex-col !justify-between
       ${
         isSecondCardClicked
@@ -121,8 +121,8 @@ const HeroSection = () => {
         goals."`}
                 </p>
               </div>
-              <div className="w-full flex justify-end">
-                <Button className="basis-1/2">Contact us</Button>
+              <div className="w-full flex md:justify-end">
+                <Button className="basis-1/2 bg-custom-primary rounded-xl">Contact us</Button>
               </div>
             </div>
           </Card>

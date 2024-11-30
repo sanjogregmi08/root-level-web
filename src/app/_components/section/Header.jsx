@@ -11,10 +11,10 @@ import { SlCallOut } from "react-icons/sl";
 
 const Header = () => {
   return (
-    <div className="bg-white py-5 px-8 xl:px-32 fixed w-full z-20 border-b shadow-sm">
+    <div className="bg-white py-5 px-8 xl:px-32 fixed w-full z-20 border-b shadow-sm" id="home">
       <div className="flex justify-between items-center">
         <div className="font-extrabold text-3xl">
-          <Link href={`/`}>
+          <Link href={`#home`}>
             <Image
               src={logo}
               width={150}
@@ -24,15 +24,15 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div className="hidden md:flex items-center gap-6">
-          <Link href={`/about-us`} className="flex items-center gap-1 group">
+        <div className="hidden md:flex items-center gap-4 xl:gap-6">
+          <Link href={`#about-us`} className="flex items-center gap-1 group">
             <span className=" relative font-medium text-custom-neutral20">
               About Us
               <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </span>
             <TbCone className="w-4 h-4" />
           </Link>
-          <Link href={`/services`} className="flex items-center gap-1 group">
+          <Link href={`#services`} className="flex items-center gap-1 group">
             <span className=" relative font-medium text-custom-neutral20">
               Services
               <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
@@ -46,7 +46,7 @@ const Header = () => {
             </span>
             <IoBriefcaseOutline className="w-4 h-4" />
           </Link>
-          <Link href={`/contact-us`} className="flex items-center gap-1 group">
+          <Link href={`#contact-us`} className="flex items-center gap-1 group">
             <span className=" relative font-medium text-custom-neutral20">
               Contact Us
               <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>

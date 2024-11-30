@@ -4,7 +4,7 @@ import { LuArrowUpRight } from "react-icons/lu";
 
 const AboutUsSection = () => {
   return (
-    <div className="py-16 px-4 flex justify-center bg-[#fffffb]">
+    <div className="pt-20 pb-16 px-8 flex justify-center bg-[#fffffb]" id="about-us">
       <div className="max-w-[68.375rem] flex flex-col items-center text-custom-primary">
         <div className="mb-5 text-center">
           <span className="text-titleMediumLarge font-medium">{`innovative-solutions - elevating-success`}</span>
@@ -12,7 +12,7 @@ const AboutUsSection = () => {
         <div>
           <h1 className="text-displaySmall font-bold mb-5 text-center">{`About Us at a Glance`}</h1>
           <div className="space-y-4">
-            <p className="text-center">
+            <p className="text-center" >
               {`Root Level is a dedicated team of innovators, strategists, and developers. Our mission is to deliver software solutions that combine cutting-edge technology, startup agility, and unparalleled attention to detail—all while offering competitive pricing.`}
             </p>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -59,7 +59,7 @@ const AboutUsSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-4 mt-14">
+        <div className="flex flex-col-reverse xs:flex-row items-center justify-center gap-4 mt-14">
           <Link href={`/`} className="flex items-center gap-1 group">
             <span className="relative font-medium text-custom-neutral20">
               Send Inquiry

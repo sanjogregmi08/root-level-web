@@ -10,19 +10,19 @@ import { FaRocket } from "react-icons/fa6";
 
 const OurProcessSection = () => {
   return (
-    <div className="">
-      <div className="py-16 px-4 flex justify-center">
+    <div className="" id="services">
+      <div className="pt-20 pb-16 px-8 flex justify-center">
         <div className="max-w-[64.375rem] flex flex-col items-center text-custom-primary">
           <div className="mb-5 text-center">
             <span className="text-titleMediumLarge font-medium">{`let’s-build-your-digital-future-together`}</span>
           </div>
           <div>
-            <h1 className="text-displaySmall font-bold mb-5 text-center">{`At Root Level, we transform your vision into reality with a process built on collaboration, innovation, and precision, ensuring every project delivers exceptional quality and impact.`}</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 md:text-center">{`At Root Level, we transform your vision into reality with a process built on collaboration, innovation, and precision, ensuring every project delivers exceptional quality and impact.`}</h1>
           </div>
 
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 group">
-            <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] rotate-[12deg] group-hover:rotate-[0deg] p-2 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 group *:cursor-pointer">
+            <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] md:rotate-[12deg] group-hover:rotate-[0deg] p-2 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200">
+              <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
                 <div className="flex gap-2 items-center md:w-[40%]">
                   <div className="bg-custom-primary rounded-xl text-white w-[3.125rem] min-w-[3.125rem] h-[3.125rem] grid place-items-center">
                     <FaCompass className="w-5 h-5" />
@@ -39,7 +39,7 @@ const OurProcessSection = () => {
               </div>
             </div>
             <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] p-2 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
                 <div className="flex gap-2 items-center md:w-[40%]">
                   <div className="bg-custom-primary rounded-xl text-white w-[3.125rem] min-w-[3.125rem] h-[3.125rem] grid place-items-center">
                     <FaLightbulb className="w-5 h-5" />
@@ -56,7 +56,7 @@ const OurProcessSection = () => {
               </div>
             </div>
             <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] p-2 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200 mt-5">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
                 <div className="flex gap-2 items-center md:w-[40%]">
                   <div className="bg-custom-primary rounded-xl text-white w-[3.125rem] min-w-[3.125rem] h-[3.125rem] grid place-items-center">
                     <FaPencilRuler className="w-5 h-5" />
@@ -73,7 +73,7 @@ const OurProcessSection = () => {
               </div>
             </div>
             <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] p-2 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200 mt-5">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
                 <div className="flex gap-2 items-center md:w-[40%]">
                   <div className="bg-custom-primary rounded-xl text-white w-[3.125rem] min-w-[3.125rem] h-[3.125rem] grid place-items-center">
                     <PiCodeSimpleFill className="w-5 h-5" />
@@ -90,7 +90,7 @@ const OurProcessSection = () => {
               </div>
             </div>
             <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] p-2 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200 mt-5">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
                 <div className="flex gap-2 items-center md:w-[40%]">
                   <div className="bg-custom-primary rounded-xl text-white w-[3.125rem] min-w-[3.125rem] h-[3.125rem] grid place-items-center">
                     <FaBug className="w-5 h-5" />
@@ -107,7 +107,7 @@ const OurProcessSection = () => {
               </div>
             </div>
             <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] p-2 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200 mt-5">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
                 <div className="flex gap-2 items-center md:w-[40%]">
                   <div className="bg-custom-primary rounded-xl text-white w-[3.125rem] min-w-[3.125rem] h-[3.125rem] grid place-items-center">
                     <FaRocket className="w-5 h-5" />
