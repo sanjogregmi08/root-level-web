@@ -3,19 +3,22 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen w-full group transition-all duration-500 hover:bg-purple-600 bg-blue-500">
-      <div className="relative z-10 flex items-center flex-col justify-center py-32 space-y-5">
-        <span className="uppercase font-bold text-white group-hover:text-yellow-400 transition-all duration-300 cursor-pointer">
-          {`Welcome to The Root Level`}
-        </span>
-        <h1 className="text-center text-[3rem] md:text-[6rem] font-black xl:px-72 text-white group-hover:text-black drop-shadow-2xl transition-all duration-300 cursor-pointer">
-          {`The Leading IT Solutions Company`}
-        </h1>
-        <Link href={`/about-us`}>
-          <button className="bg-white text-custom-primary px-6 py-2 hover:bg-custom-primary hover:text-white transition-all duration-200 font-bold tracking-wide">
-            Read More
-          </button>
-        </Link>
+    <div className="bg-[#FFFFFB] min-h-[calc(100%-5rem)] w-full pt-8 xl:px-[7.5rem]">
+      <div className="flex items-center justify-between gap-[3rem] h-[39rem] w-full mt-11 py-16 ">
+        <div className="w-full h-full place-content-center text-custom-primary">
+          <p className="text-lg font-medium pb-2">{`"The ideas are yours. The solutions are ours."`}</p>
+          <h1 className="text-4xl font-bold leading-[2.575rem] tracking-wide ">
+            Digital partnerships
+            <br />
+            that make a difference
+          </h1>
+          <p className="text-lg font-medium pt-4 break-words">
+            <strong>The Root Level </strong> is an IT company dedicated to
+            building robust digital solutions that transform your vision into a
+            competitive advantage.{" "}
+          </p>
+        </div>
+        <div className="bg-blue-400 w-full h-full">s</div>
       </div>
     </div>
   );

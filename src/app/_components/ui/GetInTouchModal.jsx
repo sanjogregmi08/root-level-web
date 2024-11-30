@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { SlCallOut } from "react-icons/sl";
 
 const GetInTouchModal = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +22,7 @@ const GetInTouchModal = () => {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false); // State to control modal open/close
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -62,9 +64,18 @@ const GetInTouchModal = () => {
         <DialogTrigger asChild>
           <button
             onClick={() => setIsOpen(true)} // Open the modal
-            className="bg-custom-primary hover:bg-[#b20779] text-white px-6 py-3 transition-all duration-200"
+            className="bg-custom-primary hover:bg-black text-white px-4 py-1.5 transition-all duration-200 rounded-lg flex gap-2 items-center"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             Get In Touch
+            <span
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isHovered ? "w-5" : "w-0"
+              }`}
+            >
+              <SlCallOut className="w-4 h-4" />
+            </span>
           </button>
         </DialogTrigger>
         <DialogContent>
