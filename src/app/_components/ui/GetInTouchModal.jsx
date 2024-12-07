@@ -10,6 +10,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { SlCallOut } from "react-icons/sl";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const GetInTouchModal = () => {
   const [formData, setFormData] = useState({
@@ -20,8 +22,7 @@ const GetInTouchModal = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState("");
-  const [isOpen, setIsOpen] = useState(false); // State to control modal open/close
+  const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleChange = (e) => {
@@ -42,19 +43,40 @@ const GetInTouchModal = () => {
     return Object.keys(formErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log("Form Data:", formData);
-      setSuccessMessage("Thank you! Your message has been sent.");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      setErrors({});
-      setIsOpen(false); // Close the modal on successful submission
+      try {
+        const response = await fetch("https://mail-last.vercel.app/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.code === 200) {
+            toast.success("Message sent successfully!");
+            setFormData({
+              name: "",
+              email: "",
+              subject: "",
+              message: "",
+            });
+            setErrors({});
+            setIsOpen(false); // Close the modal on successful submission
+          } else {
+            throw new Error(data.status || "Failed to send the message.");
+          }
+        } else {
+          throw new Error("Failed to send the message.");
+        }
+      } catch (error) {
+        toast.error("Error sending message. Please try again.");
+        console.error("Error:", error);
+      }
     }
   };
 
@@ -63,7 +85,7 @@ const GetInTouchModal = () => {
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
           <button
-            onClick={() => setIsOpen(true)} // Open the modal
+            onClick={() => setIsOpen(true)}
             className="bg-custom-primary hover:bg-custom-primary text-white px-4 py-1.5 transition-all duration-200 rounded-lg flex gap-2 items-center"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
