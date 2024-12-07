@@ -1,10 +1,14 @@
 import Link from "next/link";
 import React from "react";
 import { LuArrowUpRight } from "react-icons/lu";
+import GetInTouchModal from "../../ui/GetInTouchModal";
 
 const AboutUsSection = () => {
   return (
-    <div className="pt-20 pb-16 px-8 flex justify-center bg-[#fffffb]" id="about-us">
+    <div
+      className="pt-20 pb-16 px-8 flex justify-center bg-[#fffffb]"
+      id="about-us"
+    >
       <div className="max-w-[68.375rem] flex flex-col items-center text-custom-primary">
         <div className="mb-5 text-center">
           <span className="text-titleMediumLarge font-medium">{`innovative-solutions - elevating-success`}</span>
@@ -12,7 +16,7 @@ const AboutUsSection = () => {
         <div>
           <h1 className="text-displaySmall font-bold mb-5 text-center">{`About Us at a Glance`}</h1>
           <div className="space-y-4">
-            <p className="text-center" >
+            <p className="text-center">
               {`Root Level is a dedicated team of innovators, strategists, and developers. Our mission is to deliver software solutions that combine cutting-edge technology, startup agility, and unparalleled attention to detail—all while offering competitive pricing.`}
             </p>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -40,7 +44,7 @@ const AboutUsSection = () => {
                 <ul className="list-disc ml-[2rem]">
                   <li>{`Advanced tech stacks (Python, JavaScript, Cloud services, etc.)`}</li>
                   <li>{`Agile methodologies for fast and iterative development.`}</li>
-                  <li>{`Deep industry experience across fintech, healthcare, e-commerce, and more.`}</li>
+                  <li>{`Deep industry experience across realstate solutions, fintech, healthcare, e-commerce, and more.`}</li>
                 </ul>
               </div>
               <div className="border border-[#ecf4f8] rounded-xl p-3">
@@ -60,15 +64,9 @@ const AboutUsSection = () => {
           </div>
         </div>
         <div className="flex flex-col-reverse xs:flex-row items-center justify-center gap-4 mt-14">
-          <Link href={`/`} className="flex items-center gap-1 group">
-            <span className="relative font-medium text-custom-neutral20">
-              Send Inquiry
-              <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-            </span>
-            <LuArrowUpRight className="w-4 h-4" />
-          </Link>
+          <GetInTouchModal type={"link"} />
 
-          <Link href="#">
+          <Link href="#services">
             <button className="bg-custom-primary text-white rounded-xl px-4 py-2 flex gap-2 md:gap-4 items-center hover:bg-black transition-all duration-200   ">
               <span className="text-titleSmall md:text-titleMedium text-nowrap">
                 Get Started Today

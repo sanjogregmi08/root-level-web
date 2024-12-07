@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MdRocketLaunch } from "react-icons/md";
 import { IoCodeSlashOutline } from "react-icons/io5";
+import GetInTouchModal from "../../ui/GetInTouchModal";
 
 const HeroSection = () => {
   const [isFirstCardClicked, setIsFirstCardClicked] = React.useState(false);
@@ -22,20 +23,18 @@ const HeroSection = () => {
             into exceptional software solutions.
           </h1>
           <p className="text-[1rem] md:text-lg font-medium py-4 md:py-8 break-words">
-            <strong>The Root Level </strong> is a trusted IT partner focused on
-            building robust, tailored digital solutions that drive growth and
-            innovation, transforming your vision into a competitive advantage.
+            <strong>The Root Level </strong> specializes in delivering
+            cutting-edge software solutions powered by AI. By leveraging
+            advanced artificial intelligence, we ensure over 25% of our code is
+            AI-generated, enhancing efficiency, precision, and scalability. Our
+            robust and tailored digital products are designed to drive growth,
+            streamline operations, and give your business a competitive edge in
+            the digital landscape.
           </p>
           <div className="flex items-center gap-4">
-            <Link href={`/`} className="flex items-center gap-1 group">
-              <span className="relative font-medium text-custom-neutral20">
-                Send Inquiry
-                <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
-              </span>
-              <LuArrowUpRight className="w-4 h-4" />
-            </Link>
+            <GetInTouchModal type={"link"} />
 
-            <Link href="#">
+            <Link href="#about-us">
               <button className="bg-custom-primary text-white rounded-xl px-4 py-2 flex gap-2 md:gap-4 items-center hover:bg-black transition-all duration-200">
                 <span className="text-titleSmall md:text-titleMedium text-nowrap">
                   Learn More
@@ -81,9 +80,13 @@ const HeroSection = () => {
         "`}
                 </p>
               </div>
-              <div className="w-full flex justify-start">
-                <Button className="basis-1/2 bg-custom-primary rounded-xl">Learn More</Button>
-              </div>
+              <Link href="#about-us">
+                <div className="w-full flex justify-start">
+                  <Button className="basis-1/2 bg-custom-primary rounded-xl">
+                    Learn More
+                  </Button>
+                </div>
+              </Link>
             </div>
           </Card>
 
@@ -121,9 +124,13 @@ const HeroSection = () => {
         goals."`}
                 </p>
               </div>
+              <Link href="#contact-us">
               <div className="w-full flex md:justify-end">
-                <Button className="basis-1/2 bg-custom-primary rounded-xl">Contact us</Button>
+                <Button className="basis-1/2 bg-custom-primary rounded-xl">
+                  Contact us
+                </Button>
               </div>
+              </Link>
             </div>
           </Card>
         </div>

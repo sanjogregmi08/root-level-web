@@ -11,10 +11,13 @@ import { SlCallOut } from "react-icons/sl";
 
 const Header = () => {
   return (
-    <div className="bg-white py-5 px-8 xl:px-32 fixed w-full z-20 border-b shadow-sm" id="home">
+    <div
+      className="bg-white py-5 px-8 xl:px-32 fixed w-full z-20 border-b shadow-sm"
+      id="home"
+    >
       <div className="flex justify-between items-center">
         <div className="font-extrabold text-3xl">
-          <Link href={`#home`}>
+          <Link href={`/`}>
             <Image
               src={logo}
               width={150}

@@ -20,19 +20,19 @@ const Footer = () => {
                 <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </span>
             </Link>
-            <Link href={`/about-us`} className="text-titleSmall group w-fit">
+            <Link href={`#about-us`} className="text-titleSmall group w-fit">
               <span className="relative font-medium text-custom-neutral20">
                 about-us
                 <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </span>
             </Link>
-            <Link href={`/services`} className="text-titleSmall group w-fit">
+            <Link href={`#services`} className="text-titleSmall group w-fit">
               <span className="relative font-medium text-custom-neutral20">
                 our-services
                 <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </span>
             </Link>
-            <Link href={`/contact-us`} className="text-titleSmall group w-fit">
+            <Link href={`#contact-us`} className="text-titleSmall group w-fit">
               <span className="relative font-medium text-custom-neutral20">
                 contact-us
                 <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
@@ -40,7 +40,7 @@ const Footer = () => {
             </Link>
             <Link href={`/career`} className="text-titleSmall group w-fit">
               <span className="relative font-medium text-custom-neutral20">
-                career
+                careers
                 <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </span>
             </Link>

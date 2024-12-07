@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import { LuBuilding2 } from "react-icons/lu";
@@ -23,51 +25,80 @@ const ContactUsSection = () => {
             </p>
           </div>
           <div>
-            <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] py-4 px-4 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div className="flex gap-2 items-center md:w-[40%]">
-                  <div className="bg-custom-primary rounded-xl text-white w-[3.125rem] min-w-[3.125rem] h-[3.125rem] grid place-items-center">
-                    <LuBuilding2 className="w-5 h-5" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-titleMedium font-medium text-nowrap">
-                      Hattigauda Budhanilkantha
-                    </span>
-                    <span className="text-labelLarge font-medium text-nowrap">
-                      kathmandu, Nepal
-                    </span>
+            <Link
+              href={`https://maps.app.goo.gl/zH7DnBUeH2XgK6nE9`}
+              target="_blank"
+            >
+              <div className="border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] py-4 px-4 rounded-2xl hover:shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] transition-all duration-200 cursor-pointer">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="flex gap-2 items-center md:w-[40%]">
+                    <div className="bg-custom-primary rounded-xl text-white w-[3.125rem] min-w-[3.125rem] h-[3.125rem] grid place-items-center">
+                      <LuBuilding2 className="w-5 h-5" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-titleMedium font-medium text-nowrap">
+                        Hattigauda Budhanilkantha
+                      </span>
+                      <span className="text-labelLarge font-medium text-nowrap">
+                        kathmandu, Nepal
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="absolute bottom-48 xs:bottom-20 xl:bottom-20 left-10   xl:left-[-11rem] w-[9.5rem] rotate-[6.555deg] border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] p-[0.625rem] rounded-2xl shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] hover:shadow-none transition-all duration-200 space-y-1">
-            <div className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary">
+            <div
+              className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary cursor-pointer"
+              onClick={() => window.open("https://wa.me/9860168661", "_blank")}
+            >
               <span className="text-labelLarge text-nowrap">whats-app</span>
               <TbBrandWhatsapp className="w-4 h-4" />
             </div>
-            <div className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary">
+            <div
+              className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary cursor-pointer"
+              onClick={() =>
+                window.open("mailto:adrian.abhishek@gmail.com", "_self")
+              }
+            >
               <span className="text-labelLarge text-nowrap">email-us</span>
               <LuSend className="w-4 h-4" />
             </div>
-            <div className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary">
+            <Link
+              className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary cursor-pointer"
+              href={`https://www.youtube.com/`}
+              target="_blank"
+            >
               <span className="text-labelLarge text-nowrap">youtube</span>
               <LuYoutube className="w-4 h-4" />
-            </div>
+            </Link>
           </div>
           <div className="absolute bottom-12 xs:bottom-20 xl:bottom-20 right-10  xl:right-[-11rem]  w-[9.5rem] rotate-[-10.48deg] border border-[#ecf4f8] hover:border-[#fffffb] bg-[#fffffb] p-[0.625rem] rounded-2xl shadow-[2px_2px_27px_-6px_rgba(0,_0,_0,_0.1)] hover:shadow-none transition-all duration-200 space-y-1">
-            <div className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary">
+            <Link
+              className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary cursor-pointer"
+              href={`https://www.instagram.com/`}
+              target="_blank"
+            >
               <span className="text-labelLarge text-nowrap">instagram</span>
               <FaInstagram className="w-4 h-4" />
-            </div>
-            <div className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary">
+            </Link>
+            <Link
+              className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary cursor-pointer"
+              href={`https://www.facebook.com/`}
+              target="_blank"
+            >
               <span className="text-labelLarge text-nowrap">facebook</span>
               <PiFacebookLogoBold className="w-4 h-4" />
-            </div>
-            <div className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary">
+            </Link>
+            <Link
+              href={`https://www.linkedin.com/company/root-level-pvt-ltd/`}
+              target="_blank"
+              className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary cursor-pointer"
+            >
               <span className="text-labelLarge text-nowrap">linked-in</span>
               <TbBrandLinkedin className="w-4 h-4" />
-            </div>
+            </Link>
           </div>
         </div>
       </div>

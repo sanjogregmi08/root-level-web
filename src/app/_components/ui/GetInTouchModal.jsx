@@ -12,8 +12,10 @@ import {
 import { SlCallOut } from "react-icons/sl";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { LuArrowUpRight } from "react-icons/lu";
 
-const GetInTouchModal = () => {
+const GetInTouchModal = ({ title, type }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,6 +26,8 @@ const GetInTouchModal = () => {
   const [errors, setErrors] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,6 +48,7 @@ const GetInTouchModal = () => {
   };
 
   const handleSubmit = async (e) => {
+    setIsSubmitting(true);
     e.preventDefault();
     if (validate()) {
       try {
@@ -67,6 +72,7 @@ const GetInTouchModal = () => {
             });
             setErrors({});
             setIsOpen(false); // Close the modal on successful submission
+            setIsSubmitting(false);
           } else {
             throw new Error(data.status || "Failed to send the message.");
           }
@@ -84,21 +90,33 @@ const GetInTouchModal = () => {
     <div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
-          <button
+          <div
             onClick={() => setIsOpen(true)}
-            className="bg-custom-primary hover:bg-custom-primary text-white px-4 py-1.5 transition-all duration-200 rounded-lg flex gap-2 items-center"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            className="cursor-pointer"
           >
-            Get In Touch
-            <span
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                isHovered ? "w-5" : "w-0"
-              }`}
-            >
-              <SlCallOut className="w-4 h-4" />
-            </span>
-          </button>
+            {type === "link" ? (
+              <div className="flex items-center gap-1 group">
+                <span className="relative font-medium text-custom-neutral20">
+                  Send Inquiry
+                  <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-custom-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                </span>
+                <LuArrowUpRight className="w-4 h-4" />
+              </div>
+            ) : (
+              <button className="bg-custom-primary hover:bg-custom-primary text-white px-4 py-1.5 transition-all duration-200 rounded-lg flex gap-2 items-center">
+                Get In Touch
+                <span
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isHovered ? "w-5" : "w-0"
+                  }`}
+                >
+                  <SlCallOut className="w-4 h-4" />
+                </span>
+              </button>
+            )}
+          </div>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
@@ -187,9 +205,14 @@ const GetInTouchModal = () => {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="bg-custom-primary text-white rounded-xl hover:bg-black font-semibold px-8 py-2 transition-all duration-200"
                 >
-                  Submit
+                  {isSubmitting ? (
+                    <AiOutlineLoading3Quarters className="text-xl animate-spin" />
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
               </form>
             </DialogDescription>
