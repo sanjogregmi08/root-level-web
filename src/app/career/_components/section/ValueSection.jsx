@@ -19,10 +19,10 @@ const ValueSection = () => {
   return (
     <div className="flex flex-col px-12">
         <div className="flex gap-12">
-          <div className='flex'>
-            <h1 className="text-3xl font-semibold text-gray-900">What we value and how we act</h1>
+          <div className='flex pl-20'>
+            <h1 className="text-3xl font-semibold text-gray-900">What we value and how <br /> we act</h1>
           </div>
-          <div className='flex flex-1'>
+          <div className='flex flex-1 pr-16'>
             <p>
               {`Every day, we make critical decisions that inform our ability to
               achieve our mission. Shaping the future of AI and, in turn, the

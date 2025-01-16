@@ -3,12 +3,12 @@ import React from "react";
 const TechnicalInterviewSection = () => {
   return (
     <div className="flex gap-10 px-12">
-      <div className="flex">
+      <div className="flex pl-20">
         <h1 className="text-3xl font-semibold text-gray-900">
           Technical Interviews
         </h1>
       </div>
-      <div className="flex flex-1">
+      <div className="flex flex-1 pr-20 pb-16">
         <p>
           {`The novel challenges we think about at Anthropic demand diverse
           expertise and perspectives. Our interview process is designed to
