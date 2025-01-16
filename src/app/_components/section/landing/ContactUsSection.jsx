@@ -59,7 +59,7 @@ const ContactUsSection = () => {
             <div
               className="border border-[#ecf4f8] bg-[#fffffb] rounded-xl py-[0.625rem] px-[0.875rem] flex items-center justify-between text-custom-primary cursor-pointer"
               onClick={() =>
-                window.open("mailto:adrian.abhishek@gmail.com", "_self")
+                window.open("mailto:adrian.abhishek@gmail.com", "_blank")
               }
             >
               <span className="text-labelLarge text-nowrap">email-us</span>

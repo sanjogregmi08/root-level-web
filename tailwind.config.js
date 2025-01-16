@@ -31,6 +31,15 @@ module.exports = {
           "0 45px 65px rgba(0, 0, 0, 0.15)",
         ],
       },
+      keyframes: {
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'fade-in-up': 'fade-in-up 1s ease-out forwards',
+      },
       fontSize: {
         displayLarge: "3.5625rem", // 57px
         displayMedium: "2.8125rem", // 45px

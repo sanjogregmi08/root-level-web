@@ -18,7 +18,7 @@ const BlogDetailsPage = () => {
   }
 
   return (
-    <div className="pt-5 pb-20 px-3 xl:px-[8rem] w-full bg-gray-100 flex flex-col-reverse md:flex-row gap-10 md:gap-4">
+    <div className="pt-12 pb-20 px-3 xl:px-[8rem] w-full bg-gray-100 flex flex-col-reverse md:flex-row gap-10 md:gap-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
         {blogData.map((blog) => (
           <div

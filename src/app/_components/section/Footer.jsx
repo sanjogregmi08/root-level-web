@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="space-y-2">
-          <h2 className="font-bold text-titleMedium">BLOG</h2>
+          <Link href={`/blog`}><h2 className="font-bold text-titleMedium">BLOG</h2></Link>
           <div className="grid gap-3">
             <Link href={`/`} className="text-titleSmall group w-fit">
               <span className="relative font-medium text-custom-neutral20">

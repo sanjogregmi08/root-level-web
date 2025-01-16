@@ -5,8 +5,8 @@ import { blogData } from "@/app/dummyData";
 
 const BlogPage = () => {
   return (
-    <div className="pt-5 pb-20 px-3 xl:px-[8rem] w-full bg-custom-darkLight">
-      <h1 className="text-black font-black text-[2rem]">{`Recent Blogs`}</h1>
+    <div className="pt-12 pb-20 px-3 xl:px-[8rem] w-full bg-custom-darkLight">
+      <h1 className="text-black font-black pt-8 text-[2rem]">{`Recent Blogs`}</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
         {blogData.map((blog) => (
           <div
