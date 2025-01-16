@@ -195,6 +195,8 @@ const OfferSection = () => {
             </div>
           </div>
 
+
+
           <div className="flex flex-col pl-20 md:flex-row items-center">
             <div className="mb-6 md:mb-0 md:mr-8">
               <Image
