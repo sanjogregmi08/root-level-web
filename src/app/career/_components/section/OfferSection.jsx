@@ -1,34 +1,36 @@
 import React from 'react'
 import Image from 'next/image'
+import DefaultImage1 from "@/assets/images/career_image_1.png"
+import DefaultImage2 from "@/assets/images/career_image_2.png"
+import DefaultImage3 from "@/assets/images/career_image_3.png"
 
 const OfferSection  = () => {
   return (
     <div className="max-w-6xl mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-left ml-28">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-neutral-700 mt-10 mb-12 ml-6 lg:ml-32 text-left">
           What We Offer
         </h2>
 
-        <div className="flex gap-20 flex-col md:flex-row items-center mb-12 ml-36">
-          <div className="mb-6 md:mb-0 md:mr-8">
-            <Image
-              src="/career_image_1.png"
-              width={1000}
-              height={800}
-              alt="Health & Wellness"
-              className="rounded-lg shadow-md"
+        <div className="flex mx-6 gap-14 flex-col md:flex-row items-center mb-12 lg:ml-36">
+          <div className="md:mb-0 md:mr-8">
+          <Image
+              src={DefaultImage1}
+              alt="Slide 1"
+              width="1000"
+              height="1000"
             />
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-gray-700 mb-4">
               Health & Wellness
             </h3>
-            <p className="text-gray-700 mb-4">
+            <p className="text-black text-base lg:text-xl mb-4">
               {`At Root Level, we believe that supporting our employees is crucial
               to our collective success and wellbeing. That's why we offer a
               range of benefits to best support you and your family, now and in
               the future.`}
             </p>
-            <ul className="list-disc list-inside text-left text-gray-700">
+            <ul className="list-disc list-inside text-left text-base lg:text-xl text-black">
               <li>
                 {`Comprehensive health, dental, and vision insurance for you and
                 your dependents`}
@@ -43,26 +45,26 @@ const OfferSection  = () => {
           </div>
         </div>
 
-        <div className="flex gap-20 flex-col md:flex-row-reverse items-center mb-12">
-          <div className="mb-6 md:mb-0 md:ml-8">
+        <div className="flex mx-6 lg:ml-32 gap-20 flex-col md:flex-row-reverse items-center mb-12">
+          <div className="md:mb-0 md:ml-8">
             <Image
-              src="/career_image_2.png"
+              src={DefaultImage2}
               width={1000}
               height={800}
               alt="Compensation & Support"
               className="rounded-lg shadow-md"
             />
           </div>
-          <div className='ml-28'>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className='ml-0'>
+            <h3 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-gray-700 mb-4">
               Compensation & Support
             </h3>
-            <p className="text-gray-700 mb-4">
+            <p className="text-black text-base lg:text-xl mb-4">
               {`Our goal is to foster an environment where you can thrive
               professionally while feeling confident that you and your loved
               ones are taken care of.`}
             </p>
-            <ul className="list-disc list-inside text-left text-gray-700">
+            <ul className="list-disc list-inside text-left text-base lg:text-xl text-black">
               <li>Competitive salary and equity packages</li>
               <li>
                 {`Optional equity donation matching at a 1:1 ratio, up to 25% of
@@ -77,10 +79,10 @@ const OfferSection  = () => {
           </div>
         </div>
 
-        <div className="flex gap-20 flex-col md:flex-row items-center ml-28">
+        <div className="flex mx-6 lg:ml-32 gap-20 flex-col md:flex-row items-center">
           <div className="mb-6 md:mb-0 md:mr-8">
             <Image
-              src="/career_image_3.png"
+              src={DefaultImage3}
               width={500}
               height={600}
               alt="Additional Benefits"
@@ -88,10 +90,10 @@ const OfferSection  = () => {
             />
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl md:text-3xl lg:text-5xl font-semibold text-gray-700 mb-4">
               Additional Benefits
             </h3>
-            <ul className="list-disc list-inside text-left text-gray-700">
+            <ul className="list-disc list-inside text-base lg:text-xl text-left text-black">
               <li>$500/month flexible wellness and time saver stipend</li>
               <li>Commuter benefits</li>
               <li>Annual education stipend</li>
