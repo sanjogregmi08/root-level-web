@@ -1,54 +1,59 @@
 "use client";
-
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import rocket from "@/assets/svg/rocket.svg";
+import WhatWeOffer from "../_components/career/WhatWeOffer";
+import ValueSection from "../_components/career/ValueSection";
+import Technical from "../_components/career/TechnicalSection";
+import LifeAtRootLevel from "../_components/career/LifeAtRootLevel";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 
-const CareerPage = () => {
-  const [email, setEmail] = React.useState("");
-
-  const handleButtonClick = () => {
-    console.log("Button Clicked");
-  };
-
+const Career = () => {
   return (
-    <div className="py-10 md:py-20 px-3 xl:px-[8rem] w-full">
-      <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-        <div className="w-full">
-          <h1 className="text-displayMedium md:text-displayLarge font-extrabold">
-            All Good Things Come to Those who wait...
-          </h1>
-          <div className="mt-10">
-            <label htmlFor="email" className="text-titleMedium font-medium">
-              Get notified when we lunch
-            </label>
-            <div className="relative mt-1">
-              <input
-                type="text"
-                id="email"
-                placeholder="example@gmail.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="border-2 w-full border-custom-neutral20 rounded-xl h-12 pl-4 pr-32"
-              />
-              <div className="absolute top-0 right-0">
-                <button
-                  className="bg-custom-primary hover:bg-[#b20779] h-12 rounded-r-xl px-6 text-white font-semibold transition-all duration-200"
-                  onClick={handleButtonClick}
-                >
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center">
-          <Image src={rocket} alt="rocket" width={300} height={300} />
-        </div>
+    <div>
+      {/* header section */}
+      <div className="w-full sm:h-12 font-medium text-center py-2.5 bg-[#323B38] text-white ">
+        Header
       </div>
-      <div></div>
+    <div className="px-4 " >
+    
+      {/* hero section */}
+      <div >
+        <div className="flex flex-col items-center justify-center text-center pt-32 pb-12 px-4 bg-white">
+          <div>
+        <TypingAnimation className="text-xl md:text-3xl lg:text-4xl font-semibold " >
+          Dare to Dream Big? Curious. Agile. Driven.
+          </TypingAnimation>
+
+           <h1><TypingAnimation className="text-xl md:text-3xl  lg:text-4xl font-semibold mb-4" delay={4000}>
+              Is This You? Join Us.....
+            </TypingAnimation>
+            </h1> 
+          </div>
+          <p className="text-sm w-9/12 md:w-8/12 lg:w-5/12 md:text-base text-gray-600 mb-6">
+          We’re looking for individuals who thrive on challenges, embrace curiosity, and have a passion for innovation. If you have a relentless drive to learn, grow, and make an impact, you’re in the right place. Being a leader in the outsourcing industry, we place a high value on employee support. To maintain consistency and competitiveness in the worldwide market, we give their input first priority when improving our overall rewards.
+          </p>
+          <Link href="/seeopenrole" className="bg-gray-800 text-white px-6 py-3 rounded-md hover:bg-gray-700 focus:outline-none">
+            See open roles
+          </Link>
+        </div>
+        <hr className="border-solid border-1 border-[#bcbbbe] mt-2" />
+      </div>
+      <div>
+        <WhatWeOffer/>
+      </div>
+      <div>
+        <ValueSection/>
+      </div>
+      <div>
+        <Technical/>
+      </div>
+    </div>
+    <div>
+        <LifeAtRootLevel/>
+      </div>
     </div>
   );
 };
 
-export default CareerPage;
+export default Career;
