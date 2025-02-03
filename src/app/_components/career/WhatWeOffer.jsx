@@ -88,13 +88,13 @@ const WhatWeOffer = () => {
            <motion.div
             key={weOffer.id}
             initial={getInitialAnimation(index)}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             whileHover={getHoverAnimation(index)}
             transition={{
               duration: 1,
               ease: "easeOut",
               // Add stagger effect based on index
-              delay: index * 2
+              delay: index * 0.8
             }}
             className="relative overflow-hidden  bg-white/5 backdrop-blur-sm p-6 cursor-pointer"
           >
