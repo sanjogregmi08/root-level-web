@@ -71,6 +71,7 @@ const ValuesGrid = () => {
       <div>
         <CareerPageCarousel/>
       </div>
+      <hr className="border-solid border border-gray-200 mt-12 sm:mt-16" />
     </div>
   );
 };

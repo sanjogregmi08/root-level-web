@@ -1,15 +1,14 @@
 'use client';
-
 import Image from "next/image";
 import React from "react";
 import Image1 from "@/assets/images/Image1.png";
 import Image2 from "@/assets/images/Image2.png";
 import Image3 from "@/assets/images/Image3.png";
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 
 const weOffer = [
   {
-    id:1,
+    id: 1,
     title: "Daily assistance with work",
     image: Image1,
     description: [
@@ -20,7 +19,7 @@ const weOffer = [
     ],
   },
   {
-    id:2,
+    id: 2,
     title: "Professional development",
     image: Image2,
     description: [
@@ -32,7 +31,7 @@ const weOffer = [
     ],
   },
   {
-    id:3,
+    id: 3,
     title: "Additional Benefits",
     image: Image3,
     description: [
@@ -41,93 +40,240 @@ const weOffer = [
       "Social security fund with health and accidental insurance.",
       "Celebrate festivals, go on workplace outings",
       "Have a team lunch or dinner with your favorite coworkers!",
-      
     ],
   },
 ];
 
-const getInitialAnimation = (index) => {
+const getInitialAnimation = (index) => ({
+  x: index % 2 === 0 ? -100 : 100,
+  opacity: 0
+});
 
-  const xOffset = index % 2 === 0 ? -100 : 100;
-  return {
-    x: xOffset,
-    opacity: 0
-  };
-};
-
-
-const getHoverAnimation = (index) => {
- 
-  return {
-    scale: 1.05,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    rotate: index % 2 === 0 ? 0 : 5,
-    transition: {
-      duration: 0.2,
-      ease: "easeOut"
-    }
-  };
-};
-
-
-
+const getHoverAnimation = (index) => ({
+  scale: 1.05,
+  backgroundColor: "rgba(255, 255, 255, 0.1)",
+  rotate: index % 2 === 0 ? 0 : 5,
+  transition: {
+    duration: 0.2,
+    ease: "easeOut"
+  }
+});
 
 const WhatWeOffer = () => {
   return (
-    <div className="px-24 py-12 pb-12 bg-white">
-        <div className="px-8">
+    <section className="w-full bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-start mb-6 sm:mb-8 text-gray-800">
+          What We Offer
+        </h1>
 
-      <h1 className="text-3xl md:text-4xl font-semibold text-start mb-8 text-gray-800">What We Offer</h1>
+        <div className="space-y-8 sm:space-y-12">
+          {weOffer.map((offer, index) => (
+            <div
+              key={index}
+              className={`flex flex-col ${
+                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+              } items-center gap-6 sm:gap-8 lg:gap-16`}
+            >
+              <motion.div
+                key={offer.id}
+                initial={getInitialAnimation(index)}
+                whileInView={{ x: 0, opacity: 1 }}
+                whileHover={getHoverAnimation(index)}
+                transition={{
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: index * 0.8
+                }}
+                className="relative overflow-hidden bg-white/5 backdrop-blur-sm p-4 sm:p-6 cursor-pointer w-full sm:w-auto"
+              >
+                <div className="relative md:w-72 w-64 h-96 rounded-lg overflow-hidden">
+                  <Image
+                    src={offer.image}
+                    alt={offer.title}
+                    className="object-cover rounded-lg"
+                    layout="fill"
+                    priority={index === 0}
+                  />
+                </div>
+              </motion.div>
 
-      <div className="space-y-12">
-        {weOffer.map((offer, index) => (
-          <div
-            key={index}
-            className={` flex flex-col md:flex-row ${index % 2 === 0 ? "" : "md:flex-row-reverse"} items-center gap-8 lg:gap-16`}
-          >
-           <motion.div
-            key={weOffer.id}
-            initial={getInitialAnimation(index)}
-            whileInView={{ x: 0, opacity: 1 }}
-            whileHover={getHoverAnimation(index)}
-            transition={{
-              duration: 1,
-              ease: "easeOut",
-              // Add stagger effect based on index
-              delay: index * 0.8
-            }}
-            className="relative overflow-hidden  bg-white/5 backdrop-blur-sm p-6 cursor-pointer"
-          >
-            <div className="relative md:w-72 w-64 h-96 rounded-lg overflow-hidden">
-              <Image
-                src={offer.image}
-                alt={offer.title}
-                className="object-cover rounded-lg"
-                layout="fill"
-              />
+              <div className="w-full space-y-2 sm:space-y-3">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800">
+                  {offer.title}
+                </h2>
+                <p className="text-sm sm:text-base text-gray-700">
+                  {offer.description[0]}
+                </p>
+                {offer.description.length > 1 && (
+                  <ul className="list-disc list-inside text-sm sm:text-base text-gray-700 space-y-2">
+                    {offer.description.slice(1).map((item, i) => (
+                      <li key={i} className="leading-relaxed">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
-            </motion.div>
-            <div className="w-full space-y-1 lg:w-10/12 ">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800">{offer.title}</h2>
-              <p className="text-gray-700 text-sm md:text-base ">{offer.description[0]}</p>
-              {offer.description.length > 1 && (
-                <ul className="list-disc list-inside text-gray-700 ">
-                  {offer.description.slice(1).map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        
+        <hr className="border-solid border border-gray-200 mt-12 sm:mt-16" />
       </div>
-      <hr className="border-solid border-1 border-[#bcbbbe] mt-16" />
-      </div>
-    </div>
+    </section>
   );
 };
 
 export default WhatWeOffer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 'use client';
+
+// import Image from "next/image";
+// import React from "react";
+// import Image1 from "@/assets/images/Image1.png";
+// import Image2 from "@/assets/images/Image2.png";
+// import Image3 from "@/assets/images/Image3.png";
+// import { motion } from 'framer-motion'; 
+
+// const weOffer = [
+//   {
+//     id:1,
+//     title: "Daily assistance with work",
+//     image: Image1,
+//     description: [
+//       "At Root Level, we believe that supporting our employees is crucial to our collective success and wellbeing. That's why we offer a range of benefits to best support with work",
+//       "Flexibility to work from office or home.",
+//       "Receive a monthly laptop and internet allowance, and ask for resources for easy work-from-home options.",
+//       "During your stay, eat a nutritious lunch and snacks that are provided twice a day.",
+//     ],
+//   },
+//   {
+//     id:2,
+//     title: "Professional development",
+//     image: Image2,
+//     description: [
+//       "Our goal is to foster an environment where you can thrive professionally while feeling confident that you and your loved ones are taken care of.",
+//       "Fund for Growth mindset",
+//       "Salary advance",
+//       "Bonus every two years",
+//       "Life and income protection plans",
+//     ],
+//   },
+//   {
+//     id:3,
+//     title: "Additional Benefits",
+//     image: Image3,
+//     description: [
+//       "Additional Benefits include:",
+//       "Annual, sick, compensation, and bereavement leaves.",
+//       "Social security fund with health and accidental insurance.",
+//       "Celebrate festivals, go on workplace outings",
+//       "Have a team lunch or dinner with your favorite coworkers!",
+      
+//     ],
+//   },
+// ];
+
+// const getInitialAnimation = (index) => {
+
+//   const xOffset = index % 2 === 0 ? -100 : 100;
+//   return {
+//     x: xOffset,
+//     opacity: 0
+//   };
+// };
+
+
+// const getHoverAnimation = (index) => {
+ 
+//   return {
+//     scale: 1.05,
+//     backgroundColor: "rgba(255, 255, 255, 0.1)",
+//     rotate: index % 2 === 0 ? 0 : 5,
+//     transition: {
+//       duration: 0.2,
+//       ease: "easeOut"
+//     }
+//   };
+// };
+
+
+
+
+// const WhatWeOffer = () => {
+//   return (
+//     <div className="px-24 py-12 pb-12 bg-white">
+//         <div className="px-8">
+
+//       <h1 className="text-3xl md:text-4xl  font-semibold text-start mb-8 text-gray-800">What We Offer</h1>
+
+//       <div className="space-y-12">
+//         {weOffer.map((offer, index) => (
+//           <div
+//             key={index}
+//             className={` flex flex-col md:flex-row ${index % 2 === 0 ? "" : "md:flex-row-reverse"} items-center gap-8 lg:gap-16`}
+//           >
+//            <motion.div
+//             key={weOffer.id}
+//             initial={getInitialAnimation(index)}
+//             whileInView={{ x: 0, opacity: 1 }}
+//             whileHover={getHoverAnimation(index)}
+//             transition={{
+//               duration: 1,
+//               ease: "easeOut",
+//               // Add stagger effect based on index
+//               delay: index * 0.8
+//             }}
+//             className="relative overflow-hidden  bg-white/5 backdrop-blur-sm p-6 cursor-pointer"
+//           >
+//             <div className="relative md:w-72 w-64 h-96 rounded-lg overflow-hidden">
+//               <Image
+//                 src={offer.image}
+//                 alt={offer.title}
+//                 className="object-cover rounded-lg"
+//                 layout="fill"
+//               />
+//             </div>
+//             </motion.div>
+//             <div className="w-full space-y-1 lg:w-10/12 ">
+//               <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800">{offer.title}</h2>
+//               <p className="text-gray-700 text-sm md:text-base ">{offer.description[0]}</p>
+//               {offer.description.length > 1 && (
+//                 <ul className="list-disc list-inside text-gray-700 ">
+//                   {offer.description.slice(1).map((item, i) => (
+//                     <li key={i}>{item}</li>
+//                   ))}
+//                 </ul>
+//               )}
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//       <hr className="border-solid border-1 border-[#bcbbbe] mt-16" />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default WhatWeOffer;
 
 
 
